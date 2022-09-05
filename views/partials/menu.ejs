@@ -1,0 +1,57 @@
+<header class="header-area">
+    <div class="container-fluid">
+        <div class="row ">
+
+            <div class=" col-md-2 col-sm-3">
+                <div class="logo">
+                    <a href="/">lens<br><span>light</span></a>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-9">
+                <div class="navbar-area">
+                    <nav class="site-navbar">
+                        <ul>
+                            <li>
+                                <a href="/" class="<%= path === 'index' && 'active' %>">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about" class="<%= path === 'about' && 'active' %>">About</a>
+                            </li>
+                            <li>
+                                <a href="/photos" class="<%= path === 'photos' && 'active' %>">Photos</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="<%= path === 'contact' && 'active' %>">Contact</a>
+                            </li>
+                        </ul>
+                        <!-- <button class="nav-toggler">
+                            <span></span>
+                        </button> -->
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-2 di_none">
+                <ul class="email text_align_right">
+                    <% if (user) { %>
+                        <li>
+                            <a href="/users" class="<%= path === 'users' && 'active' %>">Users</a>
+                        </li>
+                        <li>
+                            <a href="/users/dashboard" class="<%= path === 'dashboard' && 'active' %>">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Log out</a>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <a href="/register" class="<%= path === 'register' && 'active' %>">Register</a>
+                            </li>
+                            <li>
+                                <a href="/login" class="<%= path === 'login' && 'active' %>">Login</a>
+                            </li>
+                            <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
